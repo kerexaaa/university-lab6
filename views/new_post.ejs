@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <title>New Post</title>
+  </head>
+  <body>
+    <div class="container">
+      <%- include("partials/navbar.ejs") %>
+
+      <form method="post" action="/new_post">
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            id="title"
+            placeholder="Css 3"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Author</label>
+          <input
+            type="text"
+            name="author"
+            class="form-control"
+            id="author"
+            placeholder="John"
+            required
+          />
+        </div>
+        <div class="form-group mb-2">
+          <label for="message">Body</label>
+          <textarea
+            name="body"
+            class="form-control"
+            id="body"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
